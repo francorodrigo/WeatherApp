@@ -2,13 +2,25 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import getEnvVariables from './utils/getEnvVariables'
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
-
+  const {VITE_WEATHER_API_KEY} = getEnvVariables();
+  console.log("KEY",VITE_WEATHER_API_KEY);
   return (
     <div className="App">
       <div>
+        <h1>
+          Weather
+        </h1>
+        <div className="card">
+          <input>
+
+          </input>
+        </div>
+      </div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,9 +39,9 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </div>
   )
 }
 
-export default App
+export default App;
