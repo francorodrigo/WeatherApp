@@ -5,9 +5,8 @@ import './App.css'
 import getEnvVariables from './utils/getEnvVariables'
 
 const App = () => {
-  const [count, setCount] = useState(0)
   const {VITE_WEATHER_API_KEY} = getEnvVariables();
-  console.log("KEY",VITE_WEATHER_API_KEY);
+  
   return (
     <div className="App">
       <div>
